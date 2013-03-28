@@ -1,0 +1,6 @@
+name = Sunstriders
+description = Sunstriders website theme base on Tao
+base theme = tao
+core = 7.x
+
+stylesheets[all][] = css/style.css
