@@ -1,6 +1,23 @@
 name = Sunstriders
-description = Sunstriders website theme base on Tao
-base theme = tao
+description = Sunstriders website theme.
+engine = phptemplate
 core = 7.x
 
+; Regions =====================================================================
+
+regions[sidebar_first] = Sidebar first
+regions[sidebar_second] = Sidebar second
+regions[content] = Content
+regions[header] = Header
+regions[help] = Help
+regions[footer] = Footer
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+regions[highlighted] = Highlighted
+
+; Stylesheets =================================================================
+
+stylesheets[all][] = css/reset.css
+stylesheets[all][] = css/base.css
 stylesheets[all][] = css/style.css
+stylesheets[screen][] = css/drupal.css

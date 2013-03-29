@@ -16,7 +16,7 @@
  * - simpletest.css
  * - toolbar.css
  */
-function tao_css_alter(&$css) {
+function sunstriders_css_alter(&$css) {
   $exclude = array(
     'misc/vertical-tabs.css' => FALSE,
     'modules/aggregator/aggregator.css' => FALSE,
@@ -56,29 +56,29 @@ function tao_css_alter(&$css) {
 /**
  * Implementation of hook_theme().
  */
-function tao_theme() {
+function sunstriders_theme() {
   $items = array();
 
   // Consolidate a variety of theme functions under a single template type.
   $items['block'] = array(
     'arguments' => array('block' => NULL),
     'template' => 'object',
-    'path' => drupal_get_path('theme', 'tao') .'/templates',
+    'path' => drupal_get_path('theme', 'sunstriders') .'/templates',
   );
   $items['comment'] = array(
     'arguments' => array('comment' => NULL, 'node' => NULL, 'links' => array()),
     'template' => 'object',
-    'path' => drupal_get_path('theme', 'tao') .'/templates',
+    'path' => drupal_get_path('theme', 'sunstriders') .'/templates',
   );
   $items['node'] = array(
     'arguments' => array('node' => NULL, 'teaser' => FALSE, 'page' => FALSE),
     'template' => 'node',
-    'path' => drupal_get_path('theme', 'tao') .'/templates',
+    'path' => drupal_get_path('theme', 'sunstriders') .'/templates',
   );
   $items['fieldset'] = array(
     'arguments' => array('element' => array()),
     'template' => 'fieldset',
-    'path' => drupal_get_path('theme', 'tao') .'/templates',
+    'path' => drupal_get_path('theme', 'sunstriders') .'/templates',
   );
 
   // Split out pager list into separate theme function.
@@ -96,14 +96,14 @@ function tao_theme() {
 /**
  * Preprocess functions ===============================================
  */
-function tao_preprocess_html(&$vars) {
-  $vars['classes_array'][] = 'tao';
+function sunstriders_preprocess_html(&$vars) {
+  $vars['classes_array'][] = 'sunstriders';
 }
 
 /**
  * Implementation of preprocess_page().
  */
-function tao_preprocess_page(&$vars) {
+function sunstriders_preprocess_page(&$vars) {
   // Split primary and secondary local tasks
   $vars['primary_local_tasks'] = menu_primary_local_tasks();
   $vars['secondary_local_tasks'] = menu_secondary_local_tasks();
@@ -115,7 +115,7 @@ function tao_preprocess_page(&$vars) {
 /**
  * Implementation of preprocess_block().
  */
-function tao_preprocess_block(&$vars) {
+function sunstriders_preprocess_block(&$vars) {
   $vars['hook'] = 'block';
 
   $vars['attributes_array']['id'] = $vars['block_html_id'];
@@ -145,7 +145,7 @@ function tao_preprocess_block(&$vars) {
 /**
  * Implementation of preprocess_node().
  */
-function tao_preprocess_node(&$vars) {
+function sunstriders_preprocess_node(&$vars) {
   $vars['hook'] = 'node';
 
   $vars['attributes_array']['id'] = "node-{$vars['node']->nid}";
@@ -178,7 +178,7 @@ function tao_preprocess_node(&$vars) {
 /**
  * Implementation of preprocess_comment().
  */
-function tao_preprocess_comment(&$vars) {
+function sunstriders_preprocess_comment(&$vars) {
   $vars['hook'] = 'comment';
 
   $vars['title_attributes_array']['class'][] = 'comment-title';
@@ -201,7 +201,7 @@ function tao_preprocess_comment(&$vars) {
 /**
  * Implementation of preprocess_fieldset().
  */
-function tao_preprocess_fieldset(&$vars) {
+function sunstriders_preprocess_fieldset(&$vars) {
   $element = $vars['element'];
   _form_set_class($element, array('form-wrapper'));
   $vars['attributes'] = isset($element['#attributes']) ? $element['#attributes'] : array();
@@ -224,7 +224,7 @@ function tao_preprocess_fieldset(&$vars) {
 /**
  * Implementation of preprocess_field().
  */
-function tao_preprocess_field(&$vars) {
+function sunstriders_preprocess_field(&$vars) {
   // Add prose class to long text fields.
   if ($vars['element']['#field_type'] === 'text_with_summary') {
     $vars['classes_array'][] = 'prose';
@@ -239,7 +239,7 @@ function tao_preprocess_field(&$vars) {
  * Override of theme('textarea').
  * Deprecate misc/textarea.js in favor of using the 'resize' CSS3 property.
  */
-function tao_textarea($variables) {
+function sunstriders_textarea($variables) {
   $element = $variables['element'];
   $element['#attributes']['name'] = $element['#name'];
   $element['#attributes']['id'] = $element['#id'];
@@ -269,7 +269,7 @@ function tao_textarea($variables) {
  * ensure the markup will not conflict with major other styles
  * (theme_item_list() in particular).
  */
-function tao_pager($vars) {
+function sunstriders_pager($vars) {
   $tags = $vars['tags'];
   $element = $vars['element'];
   $parameters = $vars['parameters'];
@@ -312,7 +312,7 @@ function tao_pager($vars) {
 /**
  * Split out page list generation into its own function.
  */
-function tao_pager_list($vars) {
+function sunstriders_pager_list($vars) {
   $tags = $vars['tags'];
   $element = $vars['element'];
   $parameters = $vars['parameters'];
@@ -385,7 +385,7 @@ function tao_pager_list($vars) {
 /**
  * Return an array suitable for theme_links() rather than marked up HTML link.
  */
-function tao_pager_link($vars) {
+function sunstriders_pager_link($vars) {
   $text = $vars['text'];
   $page_new = $vars['page_new'];
   $element = $vars['element'];
@@ -435,7 +435,7 @@ function tao_pager_link($vars) {
 /**
  * Override of theme_views_mini_pager().
  */
-function tao_views_mini_pager($vars) {
+function sunstriders_views_mini_pager($vars) {
   $tags = $vars['tags'];
   $quantity = $vars['quantity'];
   $element = $vars['element'];
