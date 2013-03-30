@@ -32,7 +32,9 @@ a:focus {
   float: left;
 }
 #main-content {
-  width: 100%;
+  width: 580px;
+  padding: 10px;
+  margin: 0 150px;
 }
 #left {
   width: 300px;
@@ -137,7 +139,10 @@ ul.main-menu li a.active {
   color: #d6a464;
   background: transparent url(../images/bg-navigation-item-hover.png) no-repeat 50% 0;
 }
-
+#left .block {
+  width: 290px;
+  margin-bottom: 15px;
+}
 #left .block-title {
   background: url(../images/sider-block-title-bg.png) no-repeat;
   font-size: 16px;
@@ -206,6 +211,15 @@ input.form-submit {
 }
 .view-news .views-field-title a:hover {
   text-decoration: underline;
+}
+
+.block .view-news {
+  padding: 0;
+  width: 272px;
+  margin: 20px auto;
+}
+.block .view-news .views-row {
+  padding: 0;
 }
 
 /* Pager */
