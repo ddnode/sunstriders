@@ -31,7 +31,7 @@ a:focus {
 #main-content {
   float: left;
 }
-#main-content {
+.no-sidebars #main-content {
   width: 580px;
   padding: 10px;
   margin: 0 150px;
