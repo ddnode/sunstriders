@@ -1,20 +1,236 @@
 html {
-  background: #000 url(../images/body-bg.png) no-repeat;
+  background: #000;
 }
 body {
-  width: 1024px;
+  width: 900px;
+  min-height: 800px;
   margin: 0 auto;
+  padding: 0 62px;
   color: #e4d383;
-  /*background: url(../images/body-bg.png) no-repeat;*/
+  background: url(../images/body-bg.png) no-repeat;
+}
+
+a,
+a:link,
+a:visited {
+  color: #efbf81;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #efbf81;
+}
+
+#main-content ul.links li {
+  padding: 0 0.5em;
+}
+
+#left,
+#right,
+#main-content {
+  float: left;
+}
+#main-content {
+  width: 100%;
+}
+#left {
+  width: 300px;
+}
+
+.sidebar-first #main-content {
+  width: 580px;
+  padding-left: 20px;
 }
 
 #footer {
-  width: 900px;
-  margin: 0 auto;
+  margin-top: 30px;
   background: url(../images/footer-bg.png) no-repeat;
 }
 
 #footer .block {
   padding: 10px 0 0 200px;
   text-align: center;
+}
+
+/**
+ * Header social
+ */
+.social {
+  float: right;
+}
+.social .weibo {
+  font-size: 12px;
+  line-height: 1.3em;
+  padding-left: 30px;
+  background: url(../images/icon-weibo.png) no-repeat;
+  color: #e4d383;
+  text-decoration: none;
+  height: 26px;
+  display: inline-block;
+}
+.social .qq {
+  padding-left: 30px;
+  background: url(../images/icon-qq.png) no-repeat;
+  color: #e4d383;
+  text-decoration: none;
+  height: 26px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
+/**
+ * Primary navigation
+ */
+
+#navigation {
+  height: 64px;
+  background: url(../images/nav-bg.png) no-repeat;
+  margin-bottom: 34px;
+}
+
+#branding {
+  float: left;
+}
+
+#branding .site-name a {
+  display: block;
+  width: 220px;
+  height: 64px;
+  text-indent: -999em;
+}
+
+ul.main-menu {
+  margin: 30px 0 0;
+  padding: 0;
+  float: right; /* LTR */
+  font-size: 18px;
+  line-height: 1em;
+  position: relative;
+  z-index: 4;
+}
+
+ul.main-menu li {
+  margin: 0;
+  padding: 0;
+  float: left; /* LTR */
+  background-image: none;
+  border-right: 1px solid #d6a464;
+}
+ul.main-menu li.last {
+  border: none;
+}
+
+ul.main-menu li a,
+ul.main-menu li a:link,
+ul.main-menu li a:visited {
+  display: block;
+  margin: 0;
+  padding: 0 1.5em;
+  color: #d6a464;
+  text-decoration: none;
+}
+
+ul.main-menu li a:hover,
+ul.main-menu li a.active {
+  color: #d6a464;
+  background: transparent url(../images/bg-navigation-item-hover.png) no-repeat 50% 0;
+}
+
+#left .block-title {
+  background: url(../images/sider-block-title-bg.png) no-repeat;
+  font-size: 16px;
+  padding: 8px 15px;
+}
+
+.page-title {
+  background: url(../images/page-title-bg.png) no-repeat;
+  font-size: 16px;
+  padding: 8px 15px;
+}
+.breadcrumb {
+  background: url(../images/breadcrumb-bg.png) no-repeat;
+  font-size: 16px;
+  padding: 6px 15px 10px;
+  color: #d6a464;
+  margin-bottom: 16px;
+}
+.breadcrumb a {
+  color: #d6a464;
+  text-decoration: none;
+}
+.breadcrumb:before {
+  content: "位置：";
+}
+
+
+/**
+ * Contact page
+ */
+input.form-text,
+select,
+textarea {
+  border: 1px solid #591c1e;
+  color: #eee;
+  padding: 2px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+input.form-submit {
+  padding: 5px;
+  margin-top: 5px;
+  color: #d6a464;
+  border: 1px solid #a17154;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: #280302;
+}
+
+/* 新闻动态 */
+.view-news .views-row {
+  overflow: hidden;
+  line-height: 2em;
+  padding-left: 1em;
+}
+.view-news .views-field-title {
+  float: left;
+}
+.view-news .views-field-created {
+  float: right;
+}
+.view-news .views-field-title a {
+  text-decoration: none;
+}
+.view-news .views-field-title a:hover {
+  text-decoration: underline;
+}
+
+/* Pager */
+.pager {
+  background: #1d1415;
+  margin-right: 10px;
+  padding: 2px;
+  margin-top: 20px;
+}
+.pager li {
+  background: #711a1f;
+  padding: 0.2em 0.8em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid #711a1f;
+  border-color: #9c2f35 #711a1f #711a1f #9c2f35;
+}
+.pager li.pager-current {
+  background: #df983c;
+  border: 1px solid #df983c;
+  border-color: #ecbf68 #df983c #df983c #ecbf68;
+}
+.pager li a {
+  color: #000;
 }

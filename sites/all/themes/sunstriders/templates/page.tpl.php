@@ -11,11 +11,10 @@
   </div></div>
 <?php endif; ?>
 
-<div id='branding'><div class='limiter clearfix'>
-  <?php if ($site_name): ?><h1 class='site-name'><?php print $site_name ?></h1><?php endif; ?>
-</div></div>
-
 <div id='navigation'><div class='limiter clearfix'>
+  <div id='branding'><div class='limiter clearfix'>
+    <?php if ($site_name): ?><h1 class='site-name'><?php print $site_name ?></h1><?php endif; ?>
+  </div></div>
   <?php if (isset($main_menu)) : ?>
     <?php print theme('links', array('links' => $main_menu, 'attributes' => array('class' => 'links main-menu'))) ?>
   <?php endif; ?>
@@ -29,7 +28,7 @@
     <?php print render($page['highlighted']); ?>
   </div></div>
 <?php endif; ?>
-
+<?php if ($breadcrumb) print $breadcrumb; ?>
 <div id='page'><div class='limiter clearfix'>
 
   <?php if ($page['sidebar_first']): ?>
@@ -37,7 +36,6 @@
   <?php endif; ?>
 
   <div id='main-content' class='clearfix'>
-    <?php if ($breadcrumb) print $breadcrumb; ?>
     <?php print render($title_prefix); ?>
     <?php if ($title): ?><h1 class='page-title'><?php print $title ?></h1><?php endif; ?>
     <?php print render($title_suffix); ?>
