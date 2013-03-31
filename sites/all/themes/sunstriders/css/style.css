@@ -291,3 +291,29 @@ input.form-submit {
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
+
+/* 产品展示菜单 */
+#block-menu-menu-products .block-content {
+  padding: 5px 12px;
+}
+#block-menu-menu-products .icon {
+  display: block;
+  line-height: 78px;
+  border-bottom: 1px solid #88211b;
+  text-decoration: none;
+  font-size: 24px;
+  padding-left: 90px;
+}
+#block-menu-menu-products .icon-ios {
+  background: url(../images/ios.png) 10px 10px no-repeat;
+}
+#block-menu-menu-products .icon-android {
+  background: url(../images/android.png) 10px 10px no-repeat;
+}
+#block-menu-menu-products .icon-web {
+  background: url(../images/web.png) 10px 10px no-repeat;
+}
+#block-menu-menu-products .icon-video {
+  background: url(../images/video.png) 10px 10px no-repeat;
+  border: none;
+}
