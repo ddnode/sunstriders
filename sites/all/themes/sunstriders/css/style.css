@@ -129,7 +129,7 @@ ul.main-menu li a:link,
 ul.main-menu li a:visited {
   display: block;
   margin: 0;
-  padding: 0 1.5em;
+  padding: 0 1.2em;
   color: #d6a464;
   text-decoration: none;
 }
@@ -247,4 +247,47 @@ input.form-submit {
 }
 .pager li a {
   color: #000;
+}
+
+/* 产品中心 */
+.view-products-show table {
+  background: url(../images/page-title-bg.png) no-repeat;
+}
+.view-products-show table thead th {
+  line-height: 35px;
+  width: 50%;
+}
+.view-products-show table td {
+  vertical-align: top;
+}
+.view-products-show td.views-field-nothing .wrapper,
+.view-products-show td.views-field-field-development-mode .wrapper {
+  padding: 5px;
+  border-bottom: 10px solid transparent;
+  background: #333;
+  background: rgba(0,0,0,0.7);
+  height: 95px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.view-products-show td.views-field-nothing .wrapper {
+  margin-right: 5px;
+}
+.view-products-show td.views-field-field-development-mode .wrapper {
+  margin-left: 5px;
+}
+
+.view-products-show .intro-left {
+  float: left;
+  width: 76px;
+  text-align: center;
+}
+.view-products-show .intro-right {
+  width: 190px;
+  float: right;
+}
+.view-products-show .intro-left img {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
