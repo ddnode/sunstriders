@@ -36,6 +36,7 @@
   <?php endif; ?>
 
   <div id='main-content' class='clearfix'>
+    <div id='content-top' class='clearfix'><?php print render($page['content_top']) ?></div>
     <?php print render($title_prefix); ?>
     <?php if ($title): ?><h1 class='page-title'><?php print $title ?></h1><?php endif; ?>
     <?php print render($title_suffix); ?>

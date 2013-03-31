@@ -317,3 +317,24 @@ input.form-submit {
   background: url(../images/video.png) 10px 10px no-repeat;
   border: none;
 }
+
+/* 首页视频 */
+.view-front-videos {
+  position: relative;
+  background: url(../images/slideshow-bg.png) no-repeat;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+.view-front-videos .views-slideshow-controls-bottom {
+  position: absolute;
+  right: 20px;
+  top: 18px;
+}
+.view-front-videos .views-slideshow-controls-bottom .views-slideshow-pager-field-item img {
+  opacity: 0.2;
+  filter:alpha(opacity=20);
+}
+.view-front-videos .views-slideshow-controls-bottom .active img {
+  opacity: 1;
+  filter:alpha(opacity=1);
+}
