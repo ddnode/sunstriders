@@ -94,6 +94,7 @@ a:focus {
 
 #branding {
   float: left;
+  width: 220px;
 }
 
 #branding .site-name a {
