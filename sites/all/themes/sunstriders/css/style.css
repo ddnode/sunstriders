@@ -336,5 +336,5 @@ input.form-submit {
 }
 .view-front-videos .views-slideshow-controls-bottom .active img {
   opacity: 1;
-  filter:alpha(opacity=1);
+  filter:alpha(opacity=100);
 }
