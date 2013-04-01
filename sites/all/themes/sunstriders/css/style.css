@@ -94,6 +94,7 @@ a:focus {
 
 #branding {
   float: left;
+  width: 220px;
 }
 
 #branding .site-name a {
@@ -336,5 +337,5 @@ input.form-submit {
 }
 .view-front-videos .views-slideshow-controls-bottom .active img {
   opacity: 1;
-  filter:alpha(opacity=1);
+  filter:alpha(opacity=100);
 }
